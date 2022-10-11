@@ -1,3 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+
 body {
     background-color: hsl(225, 100%, 94%);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.card {
+    width: 300px;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 50px;
+
+    .img {
+        max-width: 100%;
+
+        img {
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    }
+
+    .content {
+        padding: 25px;
+        font-size: 15px;
+
+    }
+
+    .order-summary {
+        margin-bottom: 20px;
+
+        .title {
+            text-align: center;
+            font-weight: 900;
+            margin-top: 0;
+        }
+
+        .text {
+            text-align: center;
+            color: rgb(170, 168, 168);
+        }
+    }
+
+    .annual-plan {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        background-color: hsl(225, 100%, 98%);
+        border-radius: 10px;
+        margin-bottom: 20px;
+
+        img {
+            width: 35px;
+        }
+
+        .plan {
+            display: flex;
+            flex-direction: column;
+
+
+
+            h2 {
+                font-size: 13px;
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+                color: rgb(170, 168, 168);
+                font-size: 13px;
+            }
+        }
+
+        .change {
+            a {
+                font-size: 13px;
+                font-weight: 700;
+                transition: all ease-in-out 0.2s;
+
+                &:hover {
+                    text-decoration: none;
+                    color: hsl(224, 23%, 55%);
+                }
+            }
+        }
+
+
+    }
+
+
+    .button {
+        button {
+            background-color: $bright-blue;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            height: 40px;
+            color: white;
+            text-align: center;
+            font-weight: 700;
+            box-shadow: 2px 5px 10px $desaturated-blue;
+            transition: all ease-in-out 0.2s;
+
+            &:hover {
+                background-color: $desaturated-blue;
+            }
+
+        }
+    }
+
+    .cancel {
+        text-align: center;
+        margin-top: 15px;
+
+        a {
+            text-decoration: none;
+            font-weight: 700;
+            color: rgb(170, 168, 168);
+            transition: all ease-in-out 0.2s;
+
+            &:hover {
+                color: rgb(28, 28, 28);
+            }
+        }
+    }
 }
